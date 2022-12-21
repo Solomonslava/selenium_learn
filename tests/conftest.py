@@ -7,8 +7,8 @@ def web_browser():
     chrome_options = Options()
     chrome_options.add_argument("--window-size=1920,1080")
     driver = webdriver.Chrome(executable_path=r'/tests/chromedriver', options=chrome_options)
-    # driver.implicitly_wait(10)
     driver.get('https://petfriends.skillfactory.ru/login')
+
     yield driver
 
     driver.quit()
